@@ -1,0 +1,66 @@
+.wrap {
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(216, 241, 230, 0.46) 0.1%,
+    rgba(233, 226, 226, 0.28) 90.1%
+  );
+}
+.form-container {
+  background-image: linear-gradient( 109.6deg,  rgba(117,67,104,1) 11.2%, rgba(170,107,146,1) 54.7%, rgba(170,107,146,1) 100.2% );
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  max-width: 70%;
+  height: 90%;
+  margin-left: 15%;
+}
+
+h2 {
+  font-family: Alkatra;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+form {
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  font-family: Alkatra;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: Alkatra;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-family: Alkatra;
+}
+#msg {
+  padding: 40px;
+}
+
+input[type="submit"] {
+  background-color: #3795BD;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Alkatra;
+}
+
+input[type="submit"]:hover {
+  background-color: #146C94;
+}

@@ -1,0 +1,243 @@
+   .background-img {
+    background: #ad5389;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Alkatra;
+    
+  }
+  
+  h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    font-family: Alkatra;
+    
+  }
+  h2{
+    color: #fff;
+    text-align: center;
+    font-family: Alkatra;
+  }
+
+  .text h1{
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 10%;
+    font-family: Alkatra;
+  }
+
+  .querycontainer{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    text-align: justify;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .item {
+    flex: 1 0 0%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: no border;
+  }
+
+  .row p {
+    display: inline-block;
+    margin: 0 10px;
+    font-family: Alkatra;
+  }
+
+  .card-wrapper h1{
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 10%;
+    font-family: Alkatra;
+    
+  }
+
+  .card-container {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 500px;
+    width: 80%;
+    overflow: hidden; 
+    border: none;
+  }
+
+  
+  .card {
+    flex-basis: 30%;
+    transform: translateY(100%);
+    /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
+    border-radius: 8px;
+    height: 400px;
+    margin-right: 5px;
+    animation-name: slide-up;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; 
+    width: 20%;
+    margin-bottom: 20px;
+    margin-left: 0%;
+    padding: 10px;
+    /* background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%); */
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card p {
+    font-size: 16px;
+    text-align: center;
+    font-family: Alkatra;
+    }
+  
+
+  .card:last-child {
+    margin-right: 0; 
+  }
+  
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .container {
+    /* background-color: #DEF5E5; */
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    justify-content: center;
+    border-radius: 8px;
+    text-align: justify;
+    
+  
+  }
+  
+  .desc h1{
+    width: 50%;
+    padding: 20px;
+    margin-left: 13%;
+    color: black;
+    text-align: center;
+    font-size: 2.3rem;
+    /* text-align: justify; */
+    font-family: Alkatra;
+    
+
+  }
+  .desc p{
+    color: black;
+    text-align: center;
+    width: 50%;
+    margin-left: 13%;
+    font-size: 1rem;
+    text-align: justify;
+    font-family: Alkatra;
+  }
+  
+  .image {
+    width: 50%;
+  }
+  
+  .image img {
+    width: 450px;
+    height: 370px;
+    margin-left: 0%;
+
+    
+    
+
+  }
+ 
+  
+
+  button {
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+    border: none;
+    color: purple;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 40%;
+  }
+  
+
+  hr{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+  }
+  
+  .footer{
+   
+ margin: 3%;
+ padding: 30px;
+ border-radius: 20px;
+ display: flex;
+
+
+  }
+ .footer p{
+      padding: 10px;
+      color: grey;
+      font-size: 1.25rem;
+      font-family: Alkatra;
+  }
+.footer a{
+  text-decoration: none;
+}
+.footer img{
+  width: 5%;
+  margin-left: 7%;
+
+  
+}
+
+.icon{
+  margin-left: 50%;
+}
+
+.icon img{
+width: 2em;
+}
+
+.icon p{
+  padding: 10px;
+      color: grey;
+      font-size: 1.25rem;
+      font-family: Alkatra;
+}

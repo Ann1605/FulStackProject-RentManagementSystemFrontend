@@ -1,0 +1,298 @@
+<div class="container">
+  <div class="search-bar">
+    <input type="text" placeholder="Search your location..." [(ngModel)]="searchText"
+      [ngModelOptions]="{standalone: true}">
+    <button type="submit" class="rounded-button" (click)="onSearch()"><i class="fa fa-search"></i></button>
+  </div>
+
+  <div class="filter">
+
+    <div class="wrapper">
+      <button (click)=toggleDisplayDivIf()>Room Type</button>
+      <div *ngIf="isShowDivIf">
+
+        <label>
+          <input type="radio" name="type_of_room" value="Private room" (click)="onClickrooms('Private room')">
+          Private room
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="type_of_room" value="Shared room" (click)="onClickrooms('Shared room')">
+          Shared room
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="type_of_room" value="Dormitory" (click)="onClickrooms('Dormitory')">
+          Dormitory
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="type_of_room" value="" (click)="onNoneroom()">
+          None
+        </label>
+      </div>
+    </div>
+    <br><br>
+    <div class="radiocontainer">
+      <button (click)=toggleDisplayDivIftwo()>Food Service</button>
+      <div *ngIf="isShowDivIftwo">
+        <label>
+          <input type="radio" name="type_of_food" value="Self-catering" (click)="onClickfood('Self-catering')">
+          Self-catering
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="type_of_food" value="Breakfast-Included"
+            (click)="onClickfood('Breakfast included')">
+          Breakfast-Included
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="type_of_food" value="Half-Board" (click)="onClickfood('Half-board')">
+          Half-Board
+        </label>
+        <br>
+
+        <label>
+          <input type="radio" name="type_of_food" value="" (click)="onNonefood()">
+          None
+        </label>
+      </div>
+      <br><br>
+
+
+    </div>
+
+    <div class="headcontainer">
+      <button (click)=toggleDisplayDivIfthree()>Heads per Room</button>
+      <div *ngIf="isShowDivIfthree">
+        <div class="bgcontainer">
+          <tr>
+            <td>
+              <label>
+                <input type="radio" name="heads_per_room" value="1" (click)="onClickheads('1')">
+                1
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="heads_per_room" value="2" (click)="onClickheads('2')">
+                2
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="heads_per_room" value="3" (click)="onClickheads('3')">
+                3
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="heads_per_room" value="3" (click)="onClickheads('4')">
+                4
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="heads_per_room" value="3" (click)="onClickheads('5')">
+                5
+              </label>
+            </td>
+            <td>
+              <br>
+              <label>
+                <input type="radio" name="heads_per_room" value="3" (click)="onClickheads('6')">
+                6
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="heads_per_room" value="3" (click)="onClickheads('7')">
+                7
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="heads_per_room" value="3" (click)="onClickheads('8')">
+                8
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="heads_per_room" value="3" (click)="onClickheads('9')">
+                9
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="heads_per_room" value="3" (click)="onClickheads('10')">
+                10
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="heads_per_room" value="" (click)="onNoneheads()">
+                None
+              </label>
+</td></tr>
+        </div>
+      </div>
+
+      <br><br>
+
+
+    </div>
+
+
+    <!-- <div class="locationcontainer">
+      <button (click)=toggleDisplayDivIffour()>Location</button>
+      <div *ngIf="isShowDivIffour">
+        <div class="bgcontainer">
+          <tr>
+            <td>
+              <label>
+                <input type="radio" name="hostel_address" value="Kumbakonam" (click)="onClicklocation('Kumbakonam')">
+                Kumbakonam
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="hostel_address" value="Kanchipuram" (click)="onClicklocation('Kanchipuram')">
+                Kanchipuram
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="hostel_address" value="Cuddalore" (click)="onClicklocation('Cuddalore')">
+                Cuddalore
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="hostel_address" value="Erode" (click)="onClicklocation('Erode')">
+                Erode
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="hostel_address" value="Dindigul" (click)="onClicklocation('Dindigul')">
+                Dindigul
+              </label>
+
+            <td>
+              <br>
+              <label>
+                <input type="radio" name="hostel_address" value="Thanjavur" (click)="onClicklocation('Thanjavur')">
+                Thanjavur
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="hostel_address" value="Thoothukudi" (click)="onClicklocation('Thoothukudi')">
+                Thoothukudi
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="hostel_address" value="Vellore" (click)="onClicklocation('Vellore')">
+                Vellore
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="hostel_address" value="Tirunelveli" (click)="onClicklocation('Tirunelveli')">
+                Tirunelveli
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="hostel_address" value="Salem" (click)="onClicklocation('Salem')">
+                Salem
+              </label>
+              <br>
+
+              <lael>
+                <input type="radio" name="hostel_address" value="Hosur" (click)="onClicklocation('Hosur')">
+                Hosur
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="hostel_address" value="Ramanathapuram" (click)="onClicklocation('Ramanathapuram')">
+                Ramanathapuram
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="hostel_address" value="Pudukkottai" (click)="onClicklocation('Pudukkottai')">
+                Pudukkottai
+              </label>
+              <br>
+
+              <label>
+                <input type="radio" name="hostel_address" value="Namakkal" (click)="onClicklocation('Namakkal')">
+                Namakkal
+              <br>
+              <label>
+                <input type="radio" name="hostel_address" value="Nagercoil" (click)="onClicklocation('Nagercoil')">
+                Nagercoil
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="hostel_address" value="Karur" (click)="onClicklocation('Karur')">
+                Karur
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="hostel_address" value="Tiruchirappalli" (click)="onClicklocation('Tiruchirappalli')">
+                Tiruchirappalli
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="hostel_address" value="Madurai" (click)="onClicklocation('Madurai')">
+                Madurai
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="hostel_address" value="Coimbatore" (click)="onClicklocation('Coimbatore')">
+                Coimbatore
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="hostel_address" value="Chennai" (click)="onClicklocation('Chennai')">
+                Chennai
+              </label>
+              <br> -->
+
+
+      
+            
+
+      <br><br>
+
+ </div>
+
+
+<div class="error-box" *ngIf="!errorshow">
+  <p><img src="../../assets/house.png" style="width: 50px; height: 50px;">"You didn't break the Internet, but we can't
+    find what you are looking for."</p>
+</div>
+
+<div class="error-box1" *ngIf="!errorshowmsg">
+  <p><img src="../../assets/door.png" style="width: 50px; height: 50px;">"We're sorry, No room is available for Booking!
+    Please try again later."</p>
+</div>
+
+<div class="card-container" >
+<div class="cardloop"  *ngFor="let Room of allRoom">
+    <div class="card">
+    
+    <img src={{Room.image}} alt="Card 1">
+    <p>{{Room.hostel_name}}</p>
+    <p> "{{Room.hostel_description}}"</p>
+    <!-- <p>{{Room.type_of_food}}</p> -->
+  
+    <div class="card-footer">
+      <button class="rate"><i class="fa fa-star"></i>{{Room.rate}}</button>
+      <a href="https://www.booking.com" class="btn btn-primary">Book Now</a>
+    </div>
+
+  </div>
+</div>
+</div>
